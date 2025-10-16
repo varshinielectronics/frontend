@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="class-heading">THis is the heading 1</h1>
+    <h1 class="class-heading">THis is the heading 1</h1>
+    <h2 class="class-heading">THis is the heading 2</h2>
+    <h2 class="class-heading">THis is the heading 2</h2>
+    <h2 class="class-heading">THis is the heading 2</h2>
+    <script>
+    var normalHeading = document.getElementsByTagName("h1");
+        // If we use getElementsByTagName, it will return the collection (because tag will be used multiple times)
+        console.log(normalHeading);
+        // textContent, innerHTML, innerText
+        // 0 refers to the collection/array index
+        // innerHTML will render the html content
+        normalHeading[0].innerHTML = "<i>Heading has been changed by <u>DOM</u></i>";
+
+        var classHeading = document.getElementsByClassName("class-heading");
+        // innerText will render the text content
+        // If we use getElementsByClassName, it will return the collection (because class can be repeated)
+        console.log(classHeading);
+        classHeading[1].innerText = "<i>Class Heading was changed by <u>DOM</u></i>"
+
+        var idHeading = document.getElementById("id-heading");
+        // Targetting the single element, as id is unique, we don't need any collection
+        console.log(idHeading);
+        idHeading.style.color = "red";
+        idHeading.style.textAlign = "center";
+        idHeading.style.fontSize = "50px";
+        idHeading.style.backgroundColor = "lightblue";
+        idHeading.style.borderWidth = "20px";
+        idHeading.style.borderStyle = "ridge";
+        idHeading.style.borderColor = "yellow";
+        // css property background-color, it will change into camel case: backgroundColor
+        // css property border-width, it will change into camel case: borderWidth
+
+        // Casing: 
+        // Uppercase: AKSHAY RAO
+        // lowercase: akshay rao
+        // Camelcase: akshayRao
+        // Pascalcase: AkshayRao
+        // Snakecase: akshay_rao
+        </script>
+</body>
+</html>
